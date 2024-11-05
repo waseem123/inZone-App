@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your text here" />
+    <!-- Header with Title -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Punch In / Punch Out"
+        android:textColor="#333333"
+        android:textSize="24sp" />
+
+    <!-- Location Display -->
+    <TextView
+        android:id="@+id/location_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Current Location:"
+        android:textColor="#666666"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/location_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Fetching location..."
+        android:textColor="#999999"
+        android:textSize="16sp" />
+
+    <!-- Camera Preview or Placeholder for Selfie -->
+    <ImageView
+        android:id="@+id/selfie_preview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/location_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selfie_placeholder"
+        android:contentDescription="Selfie Preview"
+        android:scaleType="centerCrop" />
+
+    <!-- Punch In/Out Buttons -->
+    <LinearLayout
+        android:id="@+id/punchbuttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selfie_preview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/punch_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Punch In"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/punch_out_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5722"
+            android:text="Punch Out"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Timestamp Display -->
+    <TextView
+        android:id="@+id/timestamp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/punchbuttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Timestamp: Not available"
+        android:textColor="#666666"
+        android:textSize="16sp" />
+
+</RelativeLayout>

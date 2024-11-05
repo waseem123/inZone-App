@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Circular Background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#E0E0E0" />
+        </shape>
+    </item>
+
+    <!-- Camera Icon Placeholder -->
+    <item>
+        <bitmap
+            android:src="@android:drawable/ic_menu_camera"
+            android:gravity="center"
+            android:tint="#9E9E9E" />
+    </item>
+
+</layer-list>
